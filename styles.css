@@ -1,1 +1,161 @@
+/* General Styling */
+body {
+
+    font-family: 'Arial', sans-serif;
+  }
+  
+ 
+ 
+  .hero-head {
+  
+    margin-top: -29.58px;
+    background-color: #3440b4;
+    color: rgb(54, 43, 43);
+  }
+  
+  .title, .subtitle {
+    margin-bottom: -100px;
+    color: #f1f1f1;
+  }
+ 
+  section {
+    padding: 30px 0;
+    background-color: #010a5c;
+  }
+  
+  .box {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 200px;
+    
+  }
+  
+  .box:hover {
+    transform: scale(1.13);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-image, .sushi-image {
+    width: auto;
+    height: 250px;;
+  }
+  
+
+  .sushi-image {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+
+
+  .character-name, .sushi-name {
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+   
+  }
+  
+  
+  
+  .character-name:hover, .sushi-name:hover {
+    padding: 10px;
+    opacity: 100%;
+  }
+  
+  /* Layout for character and sushi catalog */
+  .columns.is-multiline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column.is-one-third, .column.is-one-fifth {
+    padding: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    color:#f2f2f2;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #3440b4;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+
+ 
+  
+ 
+
+
+ 
+  
+.custom-hero-background {
+  background-image: url('k.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.character-card {
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.character-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.character-card:hover .character-inner {
+  transform: rotateY(180deg); 
+}
+
+.character-front, .character-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.character-front {
+  background-color: #8f83a5;
+  
+}
+
+.character-back {
+  background-color: #f1f1f1;
+  color: black;
+  transform: rotateY(180deg); 
+}
+
+.character-name {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .columns.is-multiline {
+    flex-direction: column;
+  }
+
+  .column.is-one-third, .column.is-one-fifth {
+    width: 100%;
+  }
+}
+
+
 
